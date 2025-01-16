@@ -1,23 +1,48 @@
-site_name: 今更
+site_name: Jingeng's Notebook
 site_url: https://jin-geng.github.io/
+repo_name: Jin-Geng/notebook
+repo_url: https://github.com/Jin-Geng/Jin-Geng.github.io
+
 theme:
   name: material
   language: zh
-  logo: https://fontawesome.com/icons/paper-plane?f=classic&s=solid
-  favicon: icons/icon.jpg
+  favicon: img/avatar.png
   font: 
     text: LXGW WenKai
     code: Cascadia
+  icon: # 一些用到的icon
+    logo: fontawesome/solid/paper-plane
+    repo: fontawesome/brands/github
+    admonition:
+      info: fontawesome/solid/anchor
+      note: fontawesome/solid/pen-nib
+      abstract: fontawesome/solid/list
+      tip: fontawesome/solid/lightbulb
+      success: fontawesome/solid/check
+      question: fontawesome/solid/circle-question
+      warning: fontawesome/solid/triangle-exclamation
+      failure: material/alien
+      danger: fontawesome/solid/virus
+      bug: fontawesome/solid/robot
+      example: fontawesome/solid/flask
+      quote: fontawesome/solid/link
+    previous: fontawesome/solid/angle-left
+    next: fontawesome/solid/angle-right
+    tag:
+      default-tag: fontawesome/solid/tag
+      hardware-tag: fontawesome/solid/microchip
+      software-tag: fontawesome/solid/laptop-code
   features:
-    - content.action.edit # 编辑按钮
-    - content.action.view # 查看源代码按钮
+    # - content.action.edit # 编辑按钮
+    # - content.action.view # 查看源代码按钮
     - content.code.copy # 支持代码块复制
     - navigation.footer # 上一页和下一页
     - navigation.tabs # 一级导航在横着的导航栏
     - content.code.annotate # 可以在代码块中增添点击展示的注释，参见 https://squidfunk.github.io/mkdocs-material/reference/code-blocks/#adding-annotations
-    # - navigation.tracking # 地址栏中的 URL 会随当前位置变化为对应小节的 URL
+    - navigation.tracking # 地址栏中的 URL 会随当前位置变化为对应小节的 URL
     - navigation.indexes # 将 index 页面直接附到小节名上
     - navigation.top # 回到顶部按钮
+    - navigation.path # 面包屑
     # - navigation.sections # 二级导航是粗体
     # - navigation.expand # 导航默认展开
     - toc.follow # toc 跟随
@@ -31,7 +56,6 @@ theme:
       toggle:
         icon: material/brightness-auto
         name: 切换到亮色主题
-
     # Palette toggle for light mode
     - media: "(prefers-color-scheme: light)"
       scheme: default
@@ -40,7 +64,6 @@ theme:
       toggle:
         icon: material/brightness-7 
         name: 切换到暗色主题
-
     # Palette toggle for dark mode
     - media: "(prefers-color-scheme: dark)"
       scheme: slate
@@ -52,16 +75,71 @@ theme:
 
 extra_css:
   - stylesheets/extra.css
-  - https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css
 
-# Plugins
+extra_javascript:
+  - https://squidfunk.github.io/mkdocs-material/reference/mathjax
+  - https://polyfill.io/v3/polyfill.min.js?features=es6
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+  - https://unpkg.com/tablesort@5.3.0/dist/tablesort.min.js # 支持表格排序
+
 plugins:
-  - blog
   - search:
-      separator: '[\s\u200b\-_,:!=\[\]()"`/]+|\.(?!\d)|&[lg]t;|(?!\b)(?=[A-Z][a-z])'
-    
+      lang:
+        - zh
+        - en
+      separator: '[\s\-\.]+'
+  - statistics:
+      words_per_minute: 200
+  - git-revision-date-localized:
+      type: datetime
+      timezone: Asia/Shanghai
+      locale: zh
+      enable_creation_date: true
+      exclude:
+        - index.md
+
 markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - abbr
   - attr_list
+  - def_list
+  - footnotes
+  - meta
+  - md_in_html
+  - toc:
+      permalink: true
   - pymdownx.emoji:
       emoji_index: !!python/name:material.extensions.emoji.twemoji
       emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.caret
+  - pymdownx.critic
+  - pymdownx.details
+  - pymdownx.highlight
+  - pymdownx.inlinehilite
+  - pymdownx.keys
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+
+extra:
+  social:
+    - icon: fontawesome/brands/github 
+      link: https://github.com/Jin-Geng/
+
+copyright: Copyright &copy; 2024 - 2025 JinGeng
+
+nav:
+  - "主页":
+    - "主页": index.md
+  - "力扣":
+    - "hot 100": content/leetcode/hot100.md
