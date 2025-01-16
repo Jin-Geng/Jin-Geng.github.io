@@ -4,3 +4,6 @@ mkdocs-statistics-plugin
 jieba
 rich
 termynal
+mkdocs-static-i18n
+mkdocs-minify-plugin
+mkdocs-rss-plugin
