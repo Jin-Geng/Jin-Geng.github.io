@@ -35,6 +35,7 @@ theme:
   features:
     # - content.action.edit # 编辑按钮
     # - content.action.view # 查看源代码按钮
+    - content.tooltips
     - content.code.copy # 支持代码块复制
     - navigation.footer # 上一页和下一页
     - navigation.tabs # 一级导航在横着的导航栏
