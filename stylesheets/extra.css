@@ -8,6 +8,36 @@
     src: url("../fonts/CascadiaCode.woff2") format("woff2");
 }
 
+h2::before, h3::before, h4::before {
+    content: "# ";
+}
+
+.md-typeset h5 {
+    font-size: large;
+}
+
+.md-typeset h1,
+.md-typeset h2,
+.md-typeset h3,
+.md-typeset h4,
+.md-typeset h5 {
+    font-weight: 600;
+}
+
+body,
+input {
+    font-family: 'LXGW WenKai', 'Lexend', 'Noto Sans SC', 'Source Code Pro', -apple-system, Helvetica, Arial, sans-serif;
+}
+
+center,
+p {
+    font-size: medium;
+}
+
+.md-nav__link {
+    font-size: small;
+}
+
 .md-tabs {
     background-color: var(--md-primary-fg-color--light);
 }
@@ -24,7 +54,6 @@
 .md-tabs__link {
     margin-top: .8rem;
     opacity: .4;
-    font-family: var(--md-text-font-family);
 }
 
 .md-tabs__link--active,
@@ -272,11 +301,13 @@
 .md-typeset .admonition.advice,
 .md-typeset details.advice {
     border-color: #acc1a0;
+
 }
 
 .md-typeset .advice>.admonition-title,
 .md-typeset .advice>summary {
     background-color: #ddf7d7;
+    color: #887b7b;
 }
 
 .md-typeset .advice>.admonition-title::before,
