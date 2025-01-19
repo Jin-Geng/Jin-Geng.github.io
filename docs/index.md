@@ -5,9 +5,12 @@ statistics: true
 # 『桜の散る前に』
 
 !!! note ""
-    <div style="width:auto; height:300px; display:flex; justify-content:center; align-items:end;">
-        <video autoplay muted loop style="width:100%; height:100%; object-fit:cover;">
+    <div id="video-container" style="width:auto; height:300px; display:flex; justify-content:center; align-items:end;">
+        <video class="light-mode-video" autoplay muted loop style="width:100%; height:100%; object-fit:cover;">
             <source src="./img/bgvideo.mp4" type="video/mp4">
+        </video>
+        <video class="dark-mode-video" autoplay muted loop style="width:100%; height:100%; object-fit:cover;">
+            <source src="./img/wallpaper.mp4" type="video/mp4">
         </video>
     </div>
 

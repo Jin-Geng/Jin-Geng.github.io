@@ -8,6 +8,25 @@
     src: url("../fonts/CascadiaCode.woff2") format("woff2");
 }
 
+[data-md-color-scheme="light"] .light-mode-video {
+    display: block;
+}
+[data-md-color-scheme="light"] .dark-mode-video {
+    display: none;
+}
+[data-md-color-scheme="default"] .light-mode-video {
+    display: block;
+}
+[data-md-color-scheme="default"] .dark-mode-video {
+    display: none;
+}
+[data-md-color-scheme="slate"] .light-mode-video {
+    display: none;
+}
+[data-md-color-scheme="slate"] .dark-mode-video {
+    display: block;
+}
+
 h2::before, h3::before, h4::before {
     content: "# ";
 }
