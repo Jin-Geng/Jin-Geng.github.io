@@ -13,6 +13,7 @@ theme:
   icon: # 一些用到的icon
     logo: fontawesome/solid/paper-plane
     repo: fontawesome/brands/github
+    annotation: material/chevron-right-circle
     admonition:
       info: fontawesome/solid/anchor
       note: fontawesome/solid/pen-nib
@@ -88,8 +89,10 @@ extra_javascript:
   - https://polyfill.io/v3/polyfill.min.js?features=es6
   - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
   - https://unpkg.com/tablesort@5.3.0/dist/tablesort.min.js # 支持表格排序
+  - https://unpkg.com/twemoji@latest/dist/twemoji.min.js
 
 plugins:
+  - tags
   - search:
       lang:
         - zh
