@@ -168,5 +168,7 @@ nav:
   - "练习":
     - "leetcode" :
       - "hot 100": content/train/leetcode/hot100.md
+  - "语言":
+    - "Java": content/language/Java/Java.md
   - "杂项":
     - "mkdocs搭建": content/other/mkdocs_build/mkdocs_build.md
