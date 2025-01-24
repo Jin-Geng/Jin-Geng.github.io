@@ -169,6 +169,9 @@ nav:
     - "leetcode" :
       - "hot 100": content/train/leetcode/hot100.md
   - "语言":
-    - "Java": content/language/Java/Java.md
+    - "Java":
+      - "Java基础": content/language/Java/Java.md
+    - "Golang":
+      - "Go基础": content/language/Golang/Go.md
   - "杂项":
     - "mkdocs搭建": content/other/mkdocs_build/mkdocs_build.md

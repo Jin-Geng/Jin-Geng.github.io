@@ -27,6 +27,10 @@
     display: block;
 }
 
+.md-typeset .admonition.inline {
+    width: 280px; /* 设置为你需要的宽度 */
+}
+
 h2::before, h3::before, h4::before {
     content: "# ";
 }

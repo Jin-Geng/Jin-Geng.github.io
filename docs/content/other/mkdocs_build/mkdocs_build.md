@@ -65,3 +65,11 @@
             display: block;
         }
         ```
+
+## 修改`inline/inline-end`块的宽度
+在`extra.css`中添加如下`css`代码，注意`inline-end`和`inline`是一起修改的。
+``` css 
+.md-typeset .admonition.inline {
+    width: 280px; /* 设置为你需要的宽度 */
+}
+```
