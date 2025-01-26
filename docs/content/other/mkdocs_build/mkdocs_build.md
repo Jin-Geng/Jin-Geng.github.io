@@ -92,7 +92,7 @@
 <iframe ··· style="width:100%; height:380px; object-fit:cover;"/> <!-- (1)! -->
 ```
 
-1. `height`在`400px`左右可以使视频基本填满`annotation`
+1. `height`在`400px`左右可以使视频基本填满`admonition`
 
 其他属性值，例如在`src`属性值后添加`&autoplay=0`字段可以控制视频加载时暂停（默认自动播放），可以参考下图：
 !!! tip ""
@@ -100,6 +100,6 @@
 
 以及几个网站：[站外(外链)播放器使用文档](https://player.bilibili.com/)、[接入B站iframe视频](https://blog.csdn.net/xinshou_caizhu/article/details/94028606)、[使用更干净的哔哩哔哩iframe播放器](https://cloud.tencent.com/developer/article/2266871?areaSource=102001.12&traceId=_Wck1ahshaLqcfjbzXTy2)
 
-## 图片发大功能
+## 图片放大功能
 参考[官网教程](https://squidfunk.github.io/mkdocs-material/reference/images/)，运行`pip install mkdocs-glightbox`安装`glightbox`插件，并在
 `mkdoc.yml`内添加`plugins: - glightbox`即可。

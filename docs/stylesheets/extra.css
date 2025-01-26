@@ -52,10 +52,10 @@ input {
     font-family: 'LXGW WenKai', 'Lexend', 'Noto Sans SC', 'Source Code Pro', -apple-system, Helvetica, Arial, sans-serif;
 }
 
-center,
-p {
-    font-size: medium;
-}
+/*center,*/
+/*p {*/
+/*    font-size: medium;*/
+/*}*/
 
 .md-nav__link {
     font-size: small;
