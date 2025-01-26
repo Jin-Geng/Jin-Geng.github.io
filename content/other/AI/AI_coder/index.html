@@ -127,7 +127,16 @@
     
     
     
-  </head>
+   <link href="../../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+    html.glightbox-open { overflow: initial; height: 100%; }
+    .gslide-title { margin-top: 0px; user-select: text; }
+    .gslide-desc { color: #666; user-select: text; }
+    .gslide-image img { background: white; }
+    .gscrollbar-fixer { padding-right: 15px; }
+    .gdesc-inner { font-size: 0.75rem; }
+    body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+    body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../../../assets/javascripts/glightbox.min.js"></script></head>
   
   
     
@@ -1108,12 +1117,22 @@
 
 <h1 id="ai">搭建本地代码AI助手<a class="headerlink" href="#ai" title="Permanent link">&para;</a></h1>
 <div style="margin-top: -30px; font-size: 0.75em; opacity: 0.7;">
-<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10h-2a8 8 0 0 1-8 8 8 8 0 0 1-8-8 8 8 0 0 1 8-8zm6.78 1a.7.7 0 0 0-.48.2l-1.22 1.21 2.5 2.5L20.8 5.7c.26-.26.26-.7 0-.95L19.25 3.2c-.13-.13-.3-.2-.47-.2m-2.41 2.12L9 12.5V15h2.5l7.37-7.38z"/></svg></span> 约 68 个字 <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20c4.42 0 8-3.58 8-8s-3.58-8-8-8-8 3.58-8 8 3.58 8 8 8m0-18c5.5 0 10 4.5 10 10s-4.5 10-10 10C6.47 22 2 17.5 2 12S6.5 2 12 2m.5 11H11V7h1.5v4.26l3.7-2.13.75 1.3z"/></svg></span> 预计阅读时间不到 1 分钟</p>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10h-2a8 8 0 0 1-8 8 8 8 0 0 1-8-8 8 8 0 0 1 8-8zm6.78 1a.7.7 0 0 0-.48.2l-1.22 1.21 2.5 2.5L20.8 5.7c.26-.26.26-.7 0-.95L19.25 3.2c-.13-.13-.3-.2-.47-.2m-2.41 2.12L9 12.5V15h2.5l7.37-7.38z"/></svg></span> 约 188 个字 <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 17H7V3h14m0-2H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V3a2 2 0 0 0-2-2M3 5H1v16a2 2 0 0 0 2 2h16v-2H3m12.96-10.71-2.75 3.54-1.96-2.36L8.5 15h11z"/></svg></span> 2 张图片 <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20c4.42 0 8-3.58 8-8s-3.58-8-8-8-8 3.58-8 8 3.58 8 8 8m0-18c5.5 0 10 4.5 10 10s-4.5 10-10 10C6.47 22 2 17.5 2 12S6.5 2 12 2m.5 11H11V7h1.5v4.26l3.7-2.13.75 1.3z"/></svg></span> 预计阅读时间 1 分钟</p>
 </div>
-<div class="admonition info">
-<p class="admonition-title">起因</p>
+<details class="info" open="open">
+<summary>起因</summary>
 <p>在B站看到一个视频，可以使用<code>vscode + ollama + qwen</code>搭建一个免费的本地代码助手来作为 cursor 的下位替代。看着蛮有意思的就试了试，
-视频链接放在这<iframe src="//player.bilibili.com/player.html?isOutside=true&aid=113792172163702&bvid=BV12krYYmEn7&cid=27763017100&p=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"></iframe></p>
+视频放在这里了，有兴趣的可以直接看😋
+<iframe src="//player.bilibili.com/player.html?isOutside=true&aid=113792172163702&bvid=BV12krYYmEn7&cid=27763017100&p=1&autoplay=0" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"  style="width:100%; height:380px; object-fit:cover;"></iframe></p>
+</details>
+<p>首先前往<a href="https://ollama.com/">Ollama官网</a>下载<code>Ollama</code>本地客户端，下载安装后，在官网搜索<code>qwen2.5-coder</code>，可以选择安装不同大小的模型（一般选择14b及以下的版本，否则显存不够），
+随后在<code>cmd</code>运行列表右上方的安装代码（如图为<code>ollama run qwen2.5-coder:7b</code>）</p>
+<div class="admonition tip">
+<p><a class="glightbox" href="../../static/AI_qwen.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="qwen2.5" src="../../static/AI_qwen.png" /></a></p>
+</div>
+<p>随后在<code>vscode</code>中安装<code>continue</code>插件，并配置对应模型即可，具体可以参照视频中的方式。</p>
+<div class="admonition tip">
+<p><a class="glightbox" href="../../static/AI_continue.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="continue" src="../../static/AI_continue.png" /></a></p>
 </div>
 
 
@@ -1137,7 +1156,7 @@
     <span class="md-icon" title="最后更新">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2025年1月26日 15:49:57</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2025年1月26日 21:23:07</span>
   </span>
 
     
@@ -1268,5 +1287,7 @@
         <script src="https://unpkg.com/twemoji@latest/dist/twemoji.min.js"></script>
       
     
-  </body>
+  <script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(() => { lightbox.reload() });
+</script></body>
 </html>
