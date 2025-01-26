@@ -7,3 +7,4 @@ termynal
 mkdocs-static-i18n
 mkdocs-minify-plugin
 mkdocs-rss-plugin
+mkdocs-glightbox

@@ -73,3 +73,33 @@
     width: 280px; /* 设置为你需要的宽度 */
 }
 ```
+## 添加代码注释
+注意根据代码类型来选择注释符。例如`Java`、`C++`等需要使用`//`，而`html`则需要使用`<!---->`
+
+## 嵌入B站视频
+点击网页端B站视频的分享按钮，可以看到如下图嵌入代码选项，点击即可一键复制。
+!!! tip ""
+    ![b站截图](../static/mkdoc_bilibili.png)
+
+嵌入代码使用`iframe`标签，示例如下：
+``` html
+<iframe src="//player.bilibili.com/player.html?isOutside=true&aid=113792172163702&bvid=BV12krYYmEn7&cid=27763017100&p=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"></iframe>
+```
+
+代码中可以添加属性值来控制视频样式，例如添加`style`属性来控制视频的宽高等。
+
+``` html
+<iframe ··· style="width:100%; height:380px; object-fit:cover;"/> <!-- (1)! -->
+```
+
+1. `height`在`400px`左右可以使视频基本填满`annotation`
+
+其他属性值，例如在`src`属性值后添加`&autoplay=0`字段可以控制视频加载时暂停（默认自动播放），可以参考下图：
+!!! tip ""
+    ![播放器参数](../static/mkdoc_bili_player.png)
+
+以及几个网站：[站外(外链)播放器使用文档](https://player.bilibili.com/)、[接入B站iframe视频](https://blog.csdn.net/xinshou_caizhu/article/details/94028606)、[使用更干净的哔哩哔哩iframe播放器](https://cloud.tencent.com/developer/article/2266871?areaSource=102001.12&traceId=_Wck1ahshaLqcfjbzXTy2)
+
+## 图片发大功能
+参考[官网教程](https://squidfunk.github.io/mkdocs-material/reference/images/)，运行`pip install mkdocs-glightbox`安装`glightbox`插件，并在
+`mkdoc.yml`内添加`plugins: - glightbox`即可。
