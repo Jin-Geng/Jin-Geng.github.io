@@ -4,8 +4,6 @@ statistics: true
 
 # 『桜の散る前に』
 
-
-
 !!! note ""
     <div id="video-container" style="width:auto; height:320px; display:flex; justify-content:center; align-items:end;">
         <video class="light-mode-video" autoplay muted loop style="width:100%; height:100%; object-fit:cover;">
@@ -28,23 +26,23 @@ statistics: true
     <canvas style="touch-action: none; cursor: inherit;"></canvas>
 </div>
 
-<script src="live2d/js/jquery.min.js"></script>
-<script src="live2d/js/bootstrap.min.js"></script>
+<script src="./live2d/js/jquery.min.js"></script>
+<script src="./live2d/js/bootstrap.min.js"></script>
 
 <!-- Live2DCubismCore -->
-<script src="live2d/js/live2dcubismcore.min.js"></script>
+<script src="./live2d/js/live2dcubismcore.min.js"></script>
 
 <!-- Include Pixi. -->
-<script src="live2d/js/pixi.min.js"></script>
+<script src="./live2d/js/pixi.min.js"></script>
 
 <!-- Include Cubism Components. -->
-<script src="live2d/js/live2dcubismframework.js"></script>
-<script src="live2d/js/live2dcubismpixi.js"></script>
+<script src="./live2d/js/live2dcubismframework.js"></script>
+<script src="./live2d/js/live2dcubismpixi.js"></script>
 
 <!-- User's Script -->
-<script src="live2d/js/charData.js"></script>
-<script src="live2d/js/l2d.js"></script>
-<script src="live2d/js/main.js"></script>
+<script src="./live2d/js/charData.js"></script>
+<script src="./live2d/js/l2d.js"></script>
+<script src="./live2d/js/main.js"></script>
 
 [//]: # (<script src="https://fastly.jsdelivr.net/gh/stevenjoezhang/live2d-widget@latest/autoload.js"></script>)
 
