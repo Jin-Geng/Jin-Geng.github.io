@@ -169,6 +169,9 @@ nav:
     - "操作系统":
       - "Chapter1: 概述": content/course/OS/OS_Chapter1.md
       - "Chapter2: 进程与线程": content/course/OS/OS_Chapter2.md
+  - "APP":
+    - "Flutter":
+        - "Get Started": content/APP/Flutter/Get_Started.md
   - "练习":
     - "leetcode" :
       - "hot 100": content/train/leetcode/hot100.md
